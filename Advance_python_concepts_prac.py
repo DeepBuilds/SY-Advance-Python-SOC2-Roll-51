@@ -10,7 +10,8 @@ def addition(a, b):
     print("Hello from addition function!")
     print(f"The sum of {a} and {b} is: {a + b}")
 addition(5, 3)
-'''Output:Before the function call
+'''Output:
+Before the function call
 Hello from addition function!
 The sum of 5 and 3 is: 8
 After the function call'''
@@ -31,6 +32,7 @@ class EvenNumbers:
         else:
             raise StopIteration
 '''
+Output:
 2
 4
 6
@@ -57,6 +59,7 @@ triple = multiplier(3)
 print(double(5))
 print(triple(5))
 '''
+Output:
 10
 15
 '''

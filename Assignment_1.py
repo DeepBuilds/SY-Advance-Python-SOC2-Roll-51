@@ -70,3 +70,18 @@ library.display_books()
 
 library.return_book("Shriram", "Onepiece")
 library.display_books()
+'''Output-
+PS C:\Users\Shriram\Desktop\SY-Advance-Python> & C:\Users\Shriram\AppData\Local\Microsoft\WindowsApps\python3.13.exe c:/Users/Shriram/Desktop/SY-Advance-Python/Assignment_1.py
+Book 'Onepiece' added.
+Book 'Data Structures' added.
+Patron 'Shriram' registered.
+Shriram borrowed 'Onepiece'.
+
+Library Books:
+Onepiece by Echiro Oda - Borrowed
+Data Structures by Mark - Available
+Shriram returned 'Onepiece'.
+
+Library Books:
+Onepiece by Echiro Oda - Available
+Data Structures by Mark - Available'''

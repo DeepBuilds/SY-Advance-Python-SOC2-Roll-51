@@ -24,3 +24,9 @@ cat = Cat()
 
 show_sound(dog)
 show_sound(cat)
+'''
+Output:
+PS C:\Users\Shriram\Desktop\SY-Advance-Python> & C:\Users\Shriram\AppData\Local\Microsoft\WindowsApps\python3.13.exe "c:/Users/Shriram/Desktop/SY-Advance-Python/Basic  OOP programs/Polymorphism demonstration.py"
+Bark
+Meow
+'''

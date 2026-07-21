@@ -29,3 +29,9 @@ bike_obj = Bike("Honda", "Black", "Sports")
 
 print(car_obj.display_details())
 print(bike_obj.display_details())
+'''
+Output:
+PS C:\Users\Shriram\Desktop\SY-Advance-Python> & C:\Users\Shriram\AppData\Local\Microsoft\WindowsApps\python3.13.exe "c:/Users/Shriram/Desktop/SY-Advance-Python/Basic  OOP programs/Inheritance demonstration.py"
+Brand: Toyota, Color: Red, Doors: 4
+Brand: Honda, Color: Black, Type: Sports
+'''
