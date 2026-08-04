@@ -39,3 +39,9 @@ tab_result = fibonacci_tab(n)
 
 print("\nUsing Memoization :", memo_result)
 print("Using Tabulation  :", tab_result)
+'''
+Enter the value of n: 5
+
+Using Memoization : 5
+Using Tabulation  : 5
+ '''
