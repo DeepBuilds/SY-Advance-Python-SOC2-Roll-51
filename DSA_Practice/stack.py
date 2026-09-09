@@ -36,8 +36,10 @@ def main():
     print("\n1.push\n2.pop\n3.peck\n4.disply\n5.Exit")
     choice= int(input("Enter your choice:-"))
     if choice ==1:
-      title=input("Enter title of book")
-      lib.return_book(title)
+      no=int(input("Enter number of books to return"))
+      for i in range(no):
+        title=input("Enter title of book")
+        lib.return_book(title)
     elif choice==2:
       lib.arrange()
     elif choice==3:

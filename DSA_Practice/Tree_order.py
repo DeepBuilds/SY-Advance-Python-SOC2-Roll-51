@@ -7,7 +7,7 @@ class BT:
   def inorder(self,root):
     if root is not None:
       self.inorder(root.left)
-      print(root.data,end="->")
+      print(root.data,sep='')
       self.inorder(root.right)
   def preorder(self,root):
     if root is not None:
