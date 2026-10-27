@@ -7,7 +7,7 @@ with open('input.txt','w') as f:
   
 with open('input.txt','r') as f:
   text=f.read().lower()
-words=text.replace(',','').split()
+words=text.replace('.','').split()
 freq=Counter(words)
 with open("word_freq","w") as f:
   for word,count in freq.items():
