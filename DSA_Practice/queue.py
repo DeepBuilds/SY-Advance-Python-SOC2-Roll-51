@@ -1,46 +1,38 @@
-MAX_SIZE = 5
-queue = []
-
-def enqueue(item):
-    if len(queue) >= MAX_SIZE:
-        print("Queue is full")
-    else:
-        queue.append(item)
-        print(item, "added to queue")
-
-def dequeue():
-    if len(queue) == 0:
-        print("Queue is empty")
-    else:
-        print(queue.pop(0), "removed from queue")
-
+queue=[]
+max_s=5
+def enq(data):
+  if len(queue)!=max_s:
+    queue.append(data)
+    return f"Done:{data}"
+  
+def deq():
+  if queue:
+    data=queue.pop(0)
+    
+    return f"Deque:{data}"
+  else:
+    return 'Empty'
 def display():
-    if len(queue) == 0:
-        print("Queue is empty")
-    else:
-        print("Queue:", queue)
+  
+  if queue:
+    return queue
+  else:
+    return "empty"
+result=[]
+n=int(input())
+for i in range(n):
+  op=input().split()
+  if op[0]=='enqueue':
+    result.append(enq(op[1]))
+  elif op[0]=='dequeue':
+    result.append(deq())
+  elif op[0]=='display':
+    result.append(display())
+for i in result :
+  print(i)
 
+  
+  
 
-while True:
-    print("\n1. Enqueue")
-    print("2. Dequeue")
-    print("3. Display")
-    print("4. Exit")
-
-    choice = int(input("Enter your choice: "))
-
-    if choice == 1:
-        item = input("Enter item: ")
-        enqueue(item)
-
-    elif choice == 2:
-        dequeue()
-
-    elif choice == 3:
-        display()
-
-    elif choice == 4:
-        break
-
-    else:
-        print("Invalid choice")
+      
+  

@@ -47,4 +47,4 @@ s3=Student("Dev",51,79)
 col.add_student(s1)
 col.add_student(s2)
 col.add_student(s3)
-col.display_students()
+  

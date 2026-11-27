@@ -1,22 +1,28 @@
-def knapsack(weights, values, capacity):
-    n = len(weights)
+"""top down"""
+def knapsack(weight, value, capacity, items, dp):
 
-    dp = [[0] * (capacity + 1) for _ in range(n + 1)]
+    if items == 0 or capacity == 0:
+        return 0
 
-    for i in range(1, n + 1):
-        for j in range(1, capacity + 1):
+    if dp[items][capacity] != -1:
+        return dp[items][capacity]
 
-            if weights[i - 1] <= j:
-                dp[i][j] = max(
-                    values[i - 1] + dp[i - 1][j - weights[i - 1]],dp[i - 1][j])
-            else:
-                dp[i][j] = dp[i - 1][j]
+    if weight[items-1] <= capacity:
+        dp[items][capacity] = max(
+            value[items-1] + knapsack(weight, value, capacity-weight[items-1], items-1, dp),
+            knapsack(weight, value, capacity, items-1, dp)
+        )
+    else:
+        dp[items][capacity] = knapsack(weight, value, capacity, items-1, dp)
 
-    return dp[n][capacity]
+    return dp[items][capacity]
 
 
-weights = list(map(int, input("Enter weights: ").split()))
-values = list(map(int, input("Enter values: ").split()))
-capacity = int(input("Enter bag capacity: "))
+weight = [1, 3, 4, 5]
+value = [1, 4, 5, 7]
+capacity = 7
+items = len(weight)
 
-print("Maximum value:", knapsack(weights, values, capacity))
+dp = [[-1] * (capacity+1) for _ in range(items+1)]
+
+print(knapsack(weight, value, capacity, items, dp))
